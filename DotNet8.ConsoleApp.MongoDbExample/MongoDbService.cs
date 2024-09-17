@@ -74,6 +74,8 @@ public class MongoDbService
 
     #endregion
 
+    #region Add Blog Async
+
     public async Task AddBlogAsync(int id, string blogTitle, string blogAuthor, string blogContent)
     {
         var blog = new BlogModel()
@@ -86,6 +88,8 @@ public class MongoDbService
         var collection = GetCollection();
         await collection.InsertOneAsync(blog);
     }
+
+    #endregion
 
     public async Task UpdateBlogAsync(
         int id,
