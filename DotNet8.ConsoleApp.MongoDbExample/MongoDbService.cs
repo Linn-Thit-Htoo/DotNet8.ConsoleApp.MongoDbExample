@@ -98,6 +98,17 @@ namespace DotNet8.ConsoleApp.MongoDbExample
                 );
         }
 
+        public async Task DeleteBlogAsync(int id)
+        {
+            var blog = await GetBlogByIdAsync(id);
+            ArgumentNullException.ThrowIfNull(blog);
+
+            var collection = GetCollection();
+            var filter = Builders<BlogModel>.Filter.Eq(x => x.BlogId, id);
+
+            await collection.DeleteOneAsync(filter);
+        }
+
         private IMongoCollection<BlogModel> GetCollection()
         {
             var client = new MongoClient("mongodb://localhost:27017/");
