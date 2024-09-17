@@ -79,21 +79,23 @@ public class MongoDbService
         await collection.InsertOneAsync(blog);
     }
 
-    public async Task UpdateBlogAsync(int id, string blogTitle, string blogAuthor, string blogContent)
+    public async Task UpdateBlogAsync(
+        int id,
+        string blogTitle,
+        string blogAuthor,
+        string blogContent
+    )
     {
         var blog = await GetBlogByIdAsync(id);
         ArgumentNullException.ThrowIfNull(blog);
 
         var collection = GetCollection();
-        var updateDefinition = Builders<BlogModel>.Update
-            .Set(b => b.BlogTitle, blogTitle)
+        var updateDefinition = Builders<BlogModel>
+            .Update.Set(b => b.BlogTitle, blogTitle)
             .Set(b => b.BlogAuthor, blogAuthor)
             .Set(b => b.BlogContent, blogContent);
 
-        await collection.UpdateOneAsync(
-            b => b.BlogId == id,
-            updateDefinition
-            );
+        await collection.UpdateOneAsync(b => b.BlogId == id, updateDefinition);
     }
 
     public async Task DeleteBlogAsync(int id)
