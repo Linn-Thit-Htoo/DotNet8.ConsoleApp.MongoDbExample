@@ -114,6 +114,8 @@ public class MongoDbService
 
     #endregion
 
+    #region Delete Blog Async
+
     public async Task DeleteBlogAsync(int id)
     {
         var blog = await GetBlogByIdAsync(id);
@@ -124,6 +126,8 @@ public class MongoDbService
 
         await collection.DeleteOneAsync(filter);
     }
+
+    #endregion
 
     private IMongoCollection<BlogModel> GetCollection()
     {
