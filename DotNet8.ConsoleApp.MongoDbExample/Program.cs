@@ -1,6 +1,4 @@
-﻿using DotNet8.ConsoleApp.MongoDbExample;
-
-public class Program
+﻿public class Program
 {
     public static async Task Main(string[] args)
     {

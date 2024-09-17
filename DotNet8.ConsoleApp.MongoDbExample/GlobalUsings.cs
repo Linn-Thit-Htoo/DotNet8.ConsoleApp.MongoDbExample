@@ -1,0 +1,1 @@
+﻿global using DotNet8.ConsoleApp.MongoDbExample;
