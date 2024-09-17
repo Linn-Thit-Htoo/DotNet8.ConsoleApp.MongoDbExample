@@ -12,14 +12,20 @@ namespace DotNet8.ConsoleApp.MongoDbExample
     {
         public async Task Run()
         {
-            await GetBlogByIdAsync(1);
+            var blog = await GetBlogByIdAsync(1);
+            Console.WriteLine($"Id: {blog.Id}");
+            Console.WriteLine($"Blog Id: {blog.BlogId}");
+            Console.WriteLine($"Blog Title: {blog.BlogTitle}");
+            Console.WriteLine($"Blog Author: {blog.BlogAuthor}");
+            Console.WriteLine($"Blog Content: {blog.BlogContent}");
 
             //AddBlog(3, "Blog Title 3", "Blog Author 3", "Blog Content 3");
 
             //var blogs = await GetBlogsAsync();
             //foreach (var blog in blogs)
             //{
-            //    Console.WriteLine($"Blog Id: {blog.Id}");
+            //    Console.WriteLine($"Id: {blog.Id}");
+            //Console.WriteLine($"Blog Id: {blog.BlogId}");
             //    Console.WriteLine($"Blog Title: {blog.BlogTitle}");
             //    Console.WriteLine($"Blog Author: {blog.BlogAuthor}");
             //    Console.WriteLine($"Blog Content: {blog.BlogContent}");
