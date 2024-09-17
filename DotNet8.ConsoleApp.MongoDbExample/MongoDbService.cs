@@ -50,6 +50,8 @@ public class MongoDbService
         await DeleteBlogAsync(id);
     }
 
+    #region Get Blogs Async
+
     public async Task<List<BlogModel>> GetBlogsAsync()
     {
         var collection = GetCollection();
@@ -57,6 +59,8 @@ public class MongoDbService
 
         return blogs;
     }
+
+    #endregion
 
     public async Task<BlogModel> GetBlogByIdAsync(int id)
     {
