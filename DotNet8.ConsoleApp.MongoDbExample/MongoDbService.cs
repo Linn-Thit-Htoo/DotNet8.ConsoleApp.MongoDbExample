@@ -62,6 +62,8 @@ public class MongoDbService
 
     #endregion
 
+    #region Get Blog By Id Async
+
     public async Task<BlogModel> GetBlogByIdAsync(int id)
     {
         var collection = GetCollection();
@@ -69,6 +71,8 @@ public class MongoDbService
 
         return blog;
     }
+
+    #endregion
 
     public async Task AddBlogAsync(int id, string blogTitle, string blogAuthor, string blogContent)
     {
