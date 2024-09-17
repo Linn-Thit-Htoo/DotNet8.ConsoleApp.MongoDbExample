@@ -1,7 +1,4 @@
-﻿using MongoDB.Bson.Serialization.Attributes;
-using MongoDB.Bson;
-
-namespace DotNet8.ConsoleApp.MongoDbExample
+﻿namespace DotNet8.ConsoleApp.MongoDbExample
 {
     public class BlogModel
     {
