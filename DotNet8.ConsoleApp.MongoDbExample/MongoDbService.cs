@@ -129,6 +129,8 @@ public class MongoDbService
 
     #endregion
 
+    #region Get Collection
+
     private IMongoCollection<BlogModel> GetCollection()
     {
         var client = new MongoClient("mongodb://localhost:27017/");
@@ -137,4 +139,6 @@ public class MongoDbService
 
         return collection;
     }
+
+    #endregion
 }
