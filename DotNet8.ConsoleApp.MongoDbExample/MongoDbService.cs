@@ -91,6 +91,8 @@ public class MongoDbService
 
     #endregion
 
+    #region Update Blog Async
+
     public async Task UpdateBlogAsync(
         int id,
         string blogTitle,
@@ -109,6 +111,8 @@ public class MongoDbService
 
         await collection.UpdateOneAsync(b => b.BlogId == id, updateDefinition);
     }
+
+    #endregion
 
     public async Task DeleteBlogAsync(int id)
     {
