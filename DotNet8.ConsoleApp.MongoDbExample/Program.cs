@@ -1,10 +1,13 @@
-﻿public class Program
+﻿namespace DotNet8.ConsoleApp.MongoDbExample
 {
-    public static async Task Main(string[] args)
+    public class Program
     {
-        MongoDbService dbService = new();
-        await dbService.Run();
+        public static async Task Main(string[] args)
+        {
+            MongoDbService dbService = new();
+            await dbService.Run();
 
-        Console.ReadKey();
+            Console.ReadKey();
+        }
     }
 }
