@@ -1,6 +1,4 @@
-﻿using MongoDB.Driver;
-
-namespace DotNet8.ConsoleApp.MongoDbExample;
+﻿namespace DotNet8.ConsoleApp.MongoDbExample;
 
 public class MongoDbService
 {
