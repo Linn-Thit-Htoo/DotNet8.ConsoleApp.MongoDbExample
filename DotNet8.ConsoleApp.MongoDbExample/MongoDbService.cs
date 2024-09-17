@@ -15,6 +15,7 @@ namespace DotNet8.ConsoleApp.MongoDbExample
             //await ReadById(1);
             //await Insert(3, "Blog Title 3", "Blog Author 3", "Blog Content 3");
             //await Update(1, "Blog Title 1 updated", "Blog Author 1 updated", "Blog Content 1 updated");
+            await Delete(1);
             await ReadAll();
         }
 
@@ -50,6 +51,11 @@ namespace DotNet8.ConsoleApp.MongoDbExample
         public async Task Update(int id, string blogTitle, string blogAuthor, string blogContent)
         {
             await UpdateBlogAsync(id, blogTitle, blogAuthor, blogContent);
+        }
+
+        public async Task Delete(int id)
+        {
+            await DeleteBlogAsync(id);
         }
 
         public async Task<List<BlogModel>> GetBlogsAsync()
