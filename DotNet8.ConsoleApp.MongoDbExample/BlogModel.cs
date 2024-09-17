@@ -1,12 +1,11 @@
-﻿namespace DotNet8.ConsoleApp.MongoDbExample
+﻿namespace DotNet8.ConsoleApp.MongoDbExample;
+
+public class BlogModel
 {
-    public class BlogModel
-    {
-        [BsonId]
-        public ObjectId Id { get; set; }
-        public int BlogId { get; set; }
-        public string BlogTitle { get; set; }
-        public string BlogAuthor { get; set; }
-        public string BlogContent { get; set; }
-    }
+    [BsonId]
+    public ObjectId Id { get; set; }
+    public int BlogId { get; set; }
+    public string BlogTitle { get; set; }
+    public string BlogAuthor { get; set; }
+    public string BlogContent { get; set; }
 }
