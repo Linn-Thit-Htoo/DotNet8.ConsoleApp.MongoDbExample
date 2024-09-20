@@ -67,11 +67,12 @@ public class MongoDbService
 
     #region Delete
 
-    #endregion
     public async Task Delete(int id)
     {
         await DeleteBlogAsync(id);
     }
+
+    #endregion
 
     #region Get Blogs Async
 
