@@ -58,11 +58,12 @@ public class MongoDbService
 
     #region Update
 
-    #endregion
     public async Task Update(int id, string blogTitle, string blogAuthor, string blogContent)
     {
         await UpdateBlogAsync(id, blogTitle, blogAuthor, blogContent);
     }
+
+    #endregion
 
     public async Task Delete(int id)
     {
