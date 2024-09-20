@@ -47,10 +47,14 @@ public class MongoDbService
 
     #endregion
 
+    #region Insert
+
     public async Task Insert(int id, string blogTitle, string blogAuthor, string blogContent)
     {
         await AddBlogAsync(id, blogTitle, blogAuthor, blogContent);
     }
+
+    #endregion
 
     public async Task Update(int id, string blogTitle, string blogAuthor, string blogContent)
     {
