@@ -65,6 +65,9 @@ public class MongoDbService
 
     #endregion
 
+    #region Delete
+
+    #endregion
     public async Task Delete(int id)
     {
         await DeleteBlogAsync(id);
