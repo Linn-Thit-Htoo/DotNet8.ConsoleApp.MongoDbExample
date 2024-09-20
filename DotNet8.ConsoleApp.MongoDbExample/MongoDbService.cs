@@ -33,9 +33,8 @@ public class MongoDbService
 
     #endregion
 
-    #region ReadById
+    #region Read By Id
 
-    #endregion
     public async Task ReadById(int id)
     {
         var blog = await GetBlogByIdAsync(id);
@@ -45,6 +44,8 @@ public class MongoDbService
         Console.WriteLine($"Blog Author: {blog.BlogAuthor}");
         Console.WriteLine($"Blog Content: {blog.BlogContent}");
     }
+
+    #endregion
 
     public async Task Insert(int id, string blogTitle, string blogAuthor, string blogContent)
     {
