@@ -56,6 +56,9 @@ public class MongoDbService
 
     #endregion
 
+    #region Update
+
+    #endregion
     public async Task Update(int id, string blogTitle, string blogAuthor, string blogContent)
     {
         await UpdateBlogAsync(id, blogTitle, blogAuthor, blogContent);
