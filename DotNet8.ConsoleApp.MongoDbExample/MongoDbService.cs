@@ -4,7 +4,6 @@ public class MongoDbService
 {
     #region Run
 
-    #endregion
     public async Task Run()
     {
         //await ReadById(1);
@@ -13,6 +12,8 @@ public class MongoDbService
         await Delete(1);
         await ReadAll();
     }
+
+    #endregion
 
     public async Task ReadAll()
     {
