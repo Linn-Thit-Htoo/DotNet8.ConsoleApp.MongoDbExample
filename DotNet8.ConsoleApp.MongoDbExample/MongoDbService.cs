@@ -15,6 +15,8 @@ public class MongoDbService
 
     #endregion
 
+    #region Read All
+
     public async Task ReadAll()
     {
         var blogs = await GetBlogsAsync();
@@ -28,6 +30,8 @@ public class MongoDbService
             Console.WriteLine("-------------------------------");
         }
     }
+
+    #endregion
 
     public async Task ReadById(int id)
     {
